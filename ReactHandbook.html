@@ -34,12 +34,12 @@ const anonymousFunction = () => {
     const handleClick2 = (e) => {
       console.log('button click', e);
     }
-    
-    return (
-      <main>
-      <header>Hi {nameHandler()}</header>
-      <button onClick={handleClick1}>click1</button>  --> Called immediately as we are not using paranthesis
-      <button onClick={() => handleClick2('Teja')}>click2</button> --> Called only on click
-      </main>
-    )
-}
+    Go to header.js comppnents.
+
+USE STATE HOOK: 
+
+1. With the help of useState hook we can destructure the the property and set some default value to it. 
+2. We can also think of the destructered properties as getter and setter
+3. eg: name, setName
+4. The setName property is used to set the new value
+5. Imp: When ever we acces the default property i.e 'name', It wont be immediately changed. SEE THROUGH

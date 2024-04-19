@@ -1,7 +1,12 @@
+ import { useState } from 'react';
+
  const Header = () => {
+     const [name, setName] = useState('Teja');
+
     const handleNameChange = () => {
     const names = ['shravya', 'Teja', 'Aarya'] 
-    return names[Math.floor(Math.random() * 3)]
+    const int = Math.floor(Math.random() * 3);
+    setName(names[int])
   }
 
   const handleClick1 = () => {
@@ -18,10 +23,13 @@
   
   return (
     <main>
-    <header onDoubleClick={handleClick1}>Hi {handleNameChange()}</header>
+    <header >Hi {name}</header>
+    <button onClick={handleNameChange}>click1</button>
+
+    {/* <header >Hi {handleNameChange()}</header>
     <button onClick={handleClick1}>click1</button>
     <button onClick={() => handleClick2('Teja')}>click2</button>
-    <button onClick={(e) => handleClick3(e)}>click3</button>
+    <button onClick={(e) => handleClick3(e)}>click3</button> */}
     </main>
   )
 }
