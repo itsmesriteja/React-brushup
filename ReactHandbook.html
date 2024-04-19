@@ -1,0 +1,45 @@
+// React in my Words
+
+INITIAL SETUP
+1. Install node.js and check its version
+2. create a react app in the specific folder by using the command npx create-react-app 01tut(project name)
+3. Install extensions such as es7 react snippets and set the emmet suggestions int he settings file.
+
+BASICS
+1. JSX stands for Javascript in XML
+2. We can write all the HTML inside the Javascript file
+3. class --> className
+4. <code> </code>
+5. {} --> javascript expression
+    Eg: <p>{[1,2,3]}</p> result is 123
+6. Objects are not valid as React child
+7. Boolean will not render to the page as well
+8. Only Arrays will work 
+9 Commenting out some code:  . 
+    {
+    /* <p>{name}</p> */
+    }
+10. After installing es7 snippets, cmd + shift + R
+
+FUNCTIONAL COMPONENTS
+1. you create and component in such as Header.js and import it into the parent component App.js. 
+
+CLICK EVENTS: 
+Inside the main function: 
+const anonymousFunction = () => {
+    const handleClick1 = () => {
+      console.log('button click');
+    }
+  
+    const handleClick2 = (e) => {
+      console.log('button click', e);
+    }
+    
+    return (
+      <main>
+      <header>Hi {nameHandler()}</header>
+      <button onClick={handleClick1}>click1</button>  --> Called immediately as we are not using paranthesis
+      <button onClick={() => handleClick2('Teja')}>click2</button> --> Called only on click
+      </main>
+    )
+}
